@@ -91,7 +91,7 @@ CNN.append(ReLU())
 CNN.append(pool_layer((2,2)))
 ```
 
-Then, another layer was added to reshape the output of conv layers in order to prepare it for the dense layers of the previous assignment:
+Then, another layer was added to reshape the output of conv layers in order to prepare it for the dense layers:
 ```
 CNN.append(reshape_layer())
 ```
