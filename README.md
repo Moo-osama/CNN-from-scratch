@@ -23,7 +23,7 @@ X_TEST /= np.std(X_TEST, axis=0)
 ```
 
 ### Choosing the network architecture:
-For the number of layers, I have tried using from 1 to 10 layers and I found that applying more than two layers causes the model to over-fit very quickly with no virtual increase in the validation or test accuracies. So, after trying different architectures, I chose two layers, each with 200 nodes.
+For the number of layers, I have tried using from 1 to 10 layers and I found that applying more than 2 layers causes the model to over-fit very quickly with no virtual increase in the validation or test accuracies. So, after trying different architectures, I chose two layers, each with 200 nodes.
 
 ### Tuning hyper-parameters:
 I have used a guided search approach by first starting with small learning rate (10-6) that makes the loss go down. That made the loss go down, but it was virtually not changing (meaning that learning rate has to be increased). After increasing the learning rate to make the loss explode (with very high learning rate), I tuned the random search range to be between 10-1 and 10-3 with big search range (100 loops, each with a different rate tried with 10 epochs) and finally I chose the learning rate that corresponds to the highest validation accuracy.
